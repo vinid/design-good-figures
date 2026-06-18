@@ -50,6 +50,8 @@ Use these for paper figures, plot cards, diagrams, and annotated screenshots.
 - Use SVG-native shapes for charts and diagrams.
 - Use measured coordinates when recreating a paper plot.
 - Reserve fixed SVG regions before drawing: header, subtitle, legend, plot area, axes, value-label lane, uncertainty lane, annotation lane, and source note.
+- Add a caption only when the user provided one or when it is grounded in a cited source; otherwise leave the caption area out.
+- Use only supplied concepts for titles, subtitles, annotations, and legends. Ask before adding mechanisms, interpretations, or category names not present in the source material.
 - Do not place value labels, whisker caps, callout badges, legends, or captions in the same reserved lane.
 - After export, inspect the actual output for overlaps. If elements collide, increase canvas or spacing; do not solve collisions by making critical text too small.
 - Do not use screenshots, PNG crops, or pixel-traced SVG when the user asks for an editable figure.

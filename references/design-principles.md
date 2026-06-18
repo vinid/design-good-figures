@@ -58,7 +58,8 @@ Apply Tufte principles from `references/tufte-principles.md` and `references/ana
 
 Data integrity:
 
-- Do not hallucinate values. If point estimates, denominators, uncertainty bounds, labels, units, or source details are missing, ask the user before drawing them.
+- Do not hallucinate values or concepts. If point estimates, denominators, uncertainty bounds, labels, units, captions, source details, mechanisms, or interpretations are missing, ask the user before drawing them.
+- Do not add captions unless the user provided them or they are quoted/paraphrased from a cited source.
 - Do not digitize values from an image by eye unless the user explicitly asks for an estimated reconstruction.
 - If uncertainty bounds are unavailable, omit the whiskers and say they are unavailable instead of drawing plausible-looking intervals.
 
@@ -134,11 +135,12 @@ Rules:
 - Short lines beat polished filler.
 - If a claim sounds like marketing, replace it with evidence.
 - Do not oversell beyond the paper. Bend framing, not facts.
+- Do not invent conceptual labels, mechanisms, implications, or captions to make the figure feel more complete.
 - Mention uncertainty or caveats only when the visual claim needs them.
 
 ## Common Failure Modes
 
-- **Hallucinated values:** missing means, confidence intervals, denominators, or labels were guessed from the image. Ask the user or omit the unavailable element.
+- **Hallucinated values or concepts:** missing means, confidence intervals, denominators, labels, captions, mechanisms, or interpretations were guessed from the image or context. Ask the user or omit the unavailable element.
 - **Overlapping labels:** value labels, whiskers, badges, legends, or captions share the same lane. Reserve separate lanes and verify the exported output.
 - **Beautiful but wrong:** geometry or scale changed while recreating a paper figure. Measure the source.
 - **PNG masquerading as HTML:** user asked for editable figure but got an image crop. Rebuild in SVG.

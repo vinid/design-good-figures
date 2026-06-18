@@ -14,8 +14,8 @@ Before writing code:
 1. State the claim in one sentence.
 2. Name the comparison: baseline, human, previous SOTA, condition, or model.
 3. Pick the figure type: poster, plot, matrix, small multiple, benchmark chart, diagram, or annotated screenshot.
-4. Inventory every value needed for the visual: point estimates, denominators, uncertainty bounds, labels, units, dates, and source text.
-5. If any required value is missing, ask the user. Do not infer, estimate, digitize from pixels, or add "approximate" values unless the user explicitly asks for estimation.
+4. Inventory every value and text element needed for the visual: point estimates, denominators, uncertainty bounds, labels, units, dates, source text, captions, and framing terms.
+5. If any required value, caption, label, or concept is missing, ask the user. Do not infer, estimate, digitize from pixels, invent captions, or add "approximate" values unless the user explicitly asks for estimation.
 6. Choose one visual hierarchy: title, evidence, source.
 7. Reserve separate layout lanes for title, subtitle, legend, plot area, value labels, uncertainty marks, annotations, axis labels, and source notes.
 8. Build the figure as editable HTML/SVG unless the user explicitly asks for a raster image.
@@ -41,8 +41,8 @@ Before calling a poster or figure done:
 - [ ] The exact comparison is visible without reading the caption.
 - [ ] The important number is larger, darker, or closer to the title.
 - [ ] Baselines and units are clear.
-- [ ] Every plotted value, uncertainty mark, denominator, and source note came from the user or a cited source.
-- [ ] No missing values were guessed, digitized from pixels, or silently approximated.
+- [ ] Every plotted value, uncertainty mark, denominator, label, caption, concept, and source note came from the user or a cited source.
+- [ ] No missing values, captions, mechanisms, interpretations, or concepts were guessed, digitized from pixels, or silently approximated.
 - [ ] Labels, legends, value text, whiskers, callouts, badges, and captions do not overlap at the final export size.
 - [ ] Color has stable meaning.
 - [ ] The figure works in grayscale if color is removed.

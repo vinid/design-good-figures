@@ -2,6 +2,8 @@
 
 Extends `tufte-principles.md` with material from *Envisioning Information*, *Visual Explanations*, and *Beautiful Evidence*.
 
+Source: adapted from the Tufte visualization skill notes at https://gist.github.com/aparente/e48c353755958621b3c0004593105a90.
+
 ---
 
 ## 1. The Six Principles of Analytical Design

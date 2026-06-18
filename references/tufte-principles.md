@@ -1,5 +1,7 @@
 # Tufte's Principles for Data Visualization
 
+Source: adapted from the Tufte visualization skill notes at https://gist.github.com/aparente/e48c353755958621b3c0004593105a90.
+
 ## 1. Graphical Excellence
 
 Excellence in statistical graphics consists of complex ideas communicated with clarity, precision, and efficiency.

@@ -39,6 +39,38 @@ mkdir -p ~/.cursor/skills
 git clone https://github.com/vinid/design-good-figures ~/.cursor/skills/design-good-figures
 ```
 
+## Install For Other Agents
+
+`design-good-figures` follows the Agent Skills format: a directory with `SKILL.md` frontmatter plus optional `references/`, `scripts/`, `examples/`, and `data/` folders. That makes it portable to agents that support Agent Skills.
+
+With the Agent Skills CLI:
+
+```bash
+npx skills add vinid/design-good-figures --agent cursor
+npx skills add vinid/design-good-figures --agent claude-code
+npx skills add vinid/design-good-figures --agent codex
+```
+
+Manual project installs:
+
+```bash
+git clone https://github.com/vinid/design-good-figures .agents/skills/design-good-figures
+git clone https://github.com/vinid/design-good-figures .cursor/skills/design-good-figures
+git clone https://github.com/vinid/design-good-figures .claude/skills/design-good-figures
+git clone https://github.com/vinid/design-good-figures .codex/skills/design-good-figures
+```
+
+Manual global installs:
+
+```bash
+git clone https://github.com/vinid/design-good-figures ~/.agents/skills/design-good-figures
+git clone https://github.com/vinid/design-good-figures ~/.cursor/skills/design-good-figures
+git clone https://github.com/vinid/design-good-figures ~/.claude/skills/design-good-figures
+git clone https://github.com/vinid/design-good-figures ~/.codex/skills/design-good-figures
+```
+
+Cursor also discovers compatible skills from `.agents/skills/`, `.claude/skills/`, `.codex/skills/`, and their user-level equivalents.
+
 ## Repository Structure
 
 ```text
@@ -61,6 +93,8 @@ git clone https://github.com/vinid/design-good-figures ~/.cursor/skills/design-g
 │   ├── outcome_matrix.html
 │   ├── random_complex_plot.html
 │   ├── random_ridgeline_plot.html
+│   ├── swe_bench_lite_comparison.html
+│   ├── swe_bench_lite_comparison.png
 │   ├── research_poster.html
 │   └── vocal_cue_detection.html
 ├── scripts/
@@ -89,8 +123,15 @@ For complex plots, use Python as a geometry engine, not as the art director:
 
 ## Included Examples
 
+### Benchmark Comparison
+
+![SWE-bench Lite model comparison](examples/swe_bench_lite_comparison.png)
+
+`examples/swe_bench_lite_comparison.html` is a compact benchmark-card example: a claim-first title, grouped bars, visible uncertainty, direct value labels, and a source note in one export-ready HTML/SVG file.
+
 Open these directly in a browser:
 
+- `examples/swe_bench_lite_comparison.html`
 - `examples/research_poster.html`
 - `examples/outcome_matrix.html`
 - `examples/random_complex_plot.html`
