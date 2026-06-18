@@ -46,6 +46,7 @@ Use these for paper figures, plot cards, diagrams, and annotated screenshots.
 ## Rules
 
 - Body background: `transparent` for paper export.
+- Remove accidental backgrounds before export. Keep a white card only when the card itself is the design; otherwise make the page transparent and export with transparency.
 - SVG: explicit `viewBox`, `width: 100%`, `height: auto`.
 - Use SVG-native shapes for charts and diagrams.
 - Use measured coordinates when recreating a paper plot.

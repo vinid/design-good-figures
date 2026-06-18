@@ -2,6 +2,17 @@
 
 Always inspect the exported PNG/PDF, not only the browser view.
 
+## Background Removal
+
+Treat background removal as part of the figure, not as cleanup after export.
+
+- For paper figures, slides, posters, and composite layouts, default to `body { background: transparent; }` and export with transparency.
+- Keep a visible card or page background only when it is part of the intended design.
+- Do not leave accidental browser, viewport, or page backgrounds around a figure.
+- If exporting a transparent PNG with Playwright, use `omitBackground: true`.
+- If a browser screenshot cannot preserve transparency, switch to Playwright or export the SVG directly.
+- Inspect the exported asset over both light and dark backgrounds before calling it done.
+
 ## Chrome Poster Export
 
 ```bash
@@ -80,6 +91,7 @@ const { chromium } = require("playwright");
 ## Export Pitfalls
 
 - If fonts look wrong, preload local `woff2` files or wait longer before capture.
+- If the output has a white rectangle behind the figure, remove the page/card background or use `omitBackground: true`.
 - If colors wash out in PDF, add `print-color-adjust: exact`.
 - If the output has debug UI, hide `.controls` in print.
 - If a shadow is clipped, expand the screenshot clip box.

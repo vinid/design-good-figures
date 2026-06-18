@@ -47,5 +47,6 @@ Before calling a poster or figure done:
 - [ ] Color has stable meaning.
 - [ ] The figure works in grayscale if color is removed.
 - [ ] Text survives export at final size.
+- [ ] Background removal was handled deliberately: transparent for paper/slide assets, visible only when the background is part of the design.
 - [ ] The output file was checked, not just the browser.
 - [ ] No chartjunk, fake precision, or marketing filler.
