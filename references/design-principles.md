@@ -81,6 +81,8 @@ Layout collision checks:
 - Reserve explicit lanes for title, subtitle, legend, plot area, axis labels, tick labels, value labels, uncertainty marks, annotations, badges, and source notes before drawing.
 - Value labels should sit in a different vertical band from whisker caps and callout badges.
 - Put improvement badges outside the plot area or between groups only when they have enough clear space.
+- Use equal offsets for comparable repeated elements: badge-to-bar distance, label-to-point distance, group gutters, row height, and callout leader length.
+- If two repeated elements look related, their spacing should be visibly consistent unless the distance itself encodes data.
 - Check the exported image, not only the browser preview. If any text, whisker, badge, legend, or caption overlaps, change the layout rather than shrinking text until it becomes unreadable.
 
 For tables:
@@ -142,6 +144,7 @@ Rules:
 
 - **Hallucinated values or concepts:** missing means, confidence intervals, denominators, labels, captions, mechanisms, or interpretations were guessed from the image or context. Ask the user or omit the unavailable element.
 - **Overlapping labels:** value labels, whiskers, badges, legends, or captions share the same lane. Reserve separate lanes and verify the exported output.
+- **Uneven spacing:** comparable bars, badges, labels, or callouts have different offsets for no data reason. Make the spacing equal before export.
 - **Beautiful but wrong:** geometry or scale changed while recreating a paper figure. Measure the source.
 - **PNG masquerading as HTML:** user asked for editable figure but got an image crop. Rebuild in SVG.
 - **Pixel-traced SVG:** faithful but not editable. Use only if asked for exact pixel reproduction.

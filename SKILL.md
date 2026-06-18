@@ -44,6 +44,7 @@ Before calling a poster or figure done:
 - [ ] Every plotted value, uncertainty mark, denominator, label, caption, concept, and source note came from the user or a cited source.
 - [ ] No missing values, captions, mechanisms, interpretations, or concepts were guessed, digitized from pixels, or silently approximated.
 - [ ] Labels, legends, value text, whiskers, callouts, badges, and captions do not overlap at the final export size.
+- [ ] Repeated elements use consistent spacing: equal offsets for comparable badges, labels, bars, callouts, and group gaps unless data encodes the difference.
 - [ ] Color has stable meaning.
 - [ ] The figure works in grayscale if color is removed.
 - [ ] Text survives export at final size.
