@@ -8,9 +8,9 @@ The goal is simple: make research visuals that are clear enough for experts, pol
 
 <table>
   <tr>
-    <td><img src="examples/swe_bench_lite_comparison.png" alt="SWE-bench Lite benchmark comparison" /></td>
-    <td><img src="examples/random_complex_plot.png" alt="Complex scatter and density plot" /></td>
-    <td><img src="examples/research_poster.png" alt="Research poster example" /></td>
+    <td><img src="examples/swe_bench_lite_comparison.png" alt="SWE-bench Lite benchmark comparison" width="320" /></td>
+    <td><img src="examples/random_complex_plot.png" alt="Complex scatter and density plot" width="320" /></td>
+    <td><img src="examples/research_poster.png" alt="Research poster example" width="320" /></td>
   </tr>
   <tr>
     <td><sub>Benchmark card with uncertainty</sub></td>
