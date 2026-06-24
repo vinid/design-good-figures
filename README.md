@@ -59,33 +59,46 @@ git clone https://github.com/vinid/good-design ~/.cursor/skills/good-design
 
 `good-design` follows the Agent Skills format: a directory with `SKILL.md` frontmatter plus optional `references/`, `scripts/`, `examples/`, and `data/` folders. That makes it portable to agents that support Agent Skills.
 
-With the Agent Skills CLI:
+### With the Agent Skills CLI (recommended)
+
+The [`skills` CLI](https://github.com/vercel-labs/add-skill) auto-detects your installed agents and places the skill in the correct directory:
 
 ```bash
-npx skills add vinid/good-design --agent cursor
 npx skills add vinid/good-design --agent claude-code
 npx skills add vinid/good-design --agent codex
+npx skills add vinid/good-design --agent cursor
+
+# install to the user-level (global) directory instead of the project
+npx skills add vinid/good-design -g --agent claude-code
 ```
 
-Manual project installs:
+### Claude Code
+
+Claude Code discovers skills automatically from these directories ([docs](https://code.claude.com/docs/en/skills)):
 
 ```bash
-git clone https://github.com/vinid/good-design .agents/skills/good-design
-git clone https://github.com/vinid/good-design .cursor/skills/good-design
-git clone https://github.com/vinid/good-design .claude/skills/good-design
-git clone https://github.com/vinid/good-design .codex/skills/good-design
-```
-
-Manual global installs:
-
-```bash
-git clone https://github.com/vinid/good-design ~/.agents/skills/good-design
-git clone https://github.com/vinid/good-design ~/.cursor/skills/good-design
+# personal — available in all projects
 git clone https://github.com/vinid/good-design ~/.claude/skills/good-design
-git clone https://github.com/vinid/good-design ~/.codex/skills/good-design
+
+# project — committed to the repo, applies to that project only
+git clone https://github.com/vinid/good-design .claude/skills/good-design
 ```
 
-Cursor also discovers compatible skills from `.agents/skills/`, `.claude/skills/`, `.codex/skills/`, and their user-level equivalents.
+Claude Code picks the skill up on its next launch.
+
+### Codex
+
+Codex skills are experimental (behind a feature flag) and discovered from ([docs](https://github.com/openai/codex/blob/main/docs/skills.md)):
+
+```bash
+# personal — user-level skills
+git clone https://github.com/vinid/good-design ~/.codex/skills/good-design
+
+# repo — scanned from the working directory up to the repo root
+git clone https://github.com/vinid/good-design .agents/skills/good-design
+```
+
+Restart Codex to pick up newly added skills. It triggers implicitly when a task matches the skill `description`, or explicitly with `$good-design`.
 
 ## Repository Structure
 
